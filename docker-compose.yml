@@ -8,3 +8,4 @@ services:
     - "8080:8080"
     volumes:
       - ./data:/data
+    user: ${CURRENT_UID:?"Please run as follows 'CURRENT_UID=$$(id -u):$$(id -g) docker compose up'"}
